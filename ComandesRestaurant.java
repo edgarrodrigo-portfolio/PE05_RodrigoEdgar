@@ -69,11 +69,7 @@ public class ComandesRestaurant {
                 orderList += printTopOrder + listProduct + "\n";
                 System.out.println("Order #" + idOrder + " added correctly!");
                 idOrder++;
-                //Print Order
-                System.out.println("---- ALL ORDERS ----");
-                System.out.println(orderList);
-                System.out.println("---- BILL MOUNT ----");
-                System.out.println("Total: "+orderFinalMount);
+                showLastOrder();
             }else{
                 System.out.println("Please enter valid table number.");
                 mainMenu();
@@ -94,6 +90,18 @@ public class ComandesRestaurant {
         System.out.print("Select an option (1,2,3,4): ");
         mainOption = askOptionMenu.nextInt();
 
+    }
+    //METODE PER VEURE L'ULTIMA COMANDA
+    public void showLastOrder(){
+        //Print Order al final de la creació de cada comanda
+                System.out.println("---- ORDER ----");
+                System.out.println(orderList);
+                System.out.println("---- BILL MOUNT ----");
+                System.out.println("Total: "+orderFinalMount);
+    }
+    //METODE PER MODIFICAR DADES DE LA ULTIMA COMANDA
+    public void modifyOrder(){
+        
     }
 
 
